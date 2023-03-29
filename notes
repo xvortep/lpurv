@@ -2,3 +2,11 @@ http://moi.vonos.net/linux/framebuffer-drivers/
 https://www.kernel.org/doc/Documentation/fb/framebuffer.txt
 https://kevinboone.me/linuxfbc.html?i=1
 http://raspberrycompote.blogspot.com/2012/12/low-level-graphics-on-raspberry-pi-part_9509.html
+
+cat /sys/class/graphics/fb0/name
+
+###insm skripta
+insmod /lib/modules/5.10.110-v7+/kernel/drivers/video/fbdev/core/cfbimgblt.ko
+insmod /lib/modules/5.10.110-v7+/kernel/drivers/video/fbdev/core/cfbcopyarea.ko
+insmod /lib/modules/5.10.110-v7+/kernel/drivers/video/fbdev/core/cfbfillrect.ko
+insmod simplefb.ko
